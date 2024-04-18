@@ -9,8 +9,7 @@ config.runTimeout = 0;
 
 function init(){
 	
-    ctx = document.getElementById('canvas').getContext("2d");
-	
+	ctx = document.getElementById('canvas').getContext("2d");
 	var message = new Object();
 	message.do = 'init';
 	message.config = config;
@@ -46,7 +45,7 @@ function refresh_view(data){
 				ctx.fill();
 				break;
 			case 2:
-                ctx.fillStyle = "red";
+				ctx.fillStyle = "red";
 				ctx.beginPath();
 				ctx.rect(i * config.square_size,j * config.square_size, config.square_size, config.square_size);
 				ctx.closePath();
