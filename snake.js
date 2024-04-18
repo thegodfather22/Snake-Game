@@ -2,7 +2,7 @@ var ctx;
 
 var config = new Object();
 config.grid_size = 22;
-config.number_obstacles = 150;
+config.number_obstacles = 20;
 config.square_size = 22;
 config.snake_length = 1;
 config.runTimeout = 0;
