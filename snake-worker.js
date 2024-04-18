@@ -142,10 +142,10 @@ function findpath_a(search_type){
         closedList[n.point.x][n.point.y] = 1;
 		
 		if(closedList[n.point.x][n.point.y - 1] == 0 && (squares[n.point.x][n.point.y - 1] == 0 || squares[n.point.x][n.point.y - 1] == 2)){
-			n.children.unshift(new Node(n,new Point(n.point.x,n.point.y - 1),new Array(),n.g_score + 1,heuristic_estimate(new Point(n.point.x,n.point.y-1),food,search_type)));
+			n.children.unshift(new Node(n,new Point(n.point.x,n.point.y - 1),new Array(),n.g_score + 1,heuristic_estimate(new Point(n.point.x,n.point.y - 1),food,search_type)));
         }
 		if(closedList[n.point.x + 1][n.point.y] == 0 && (squares[n.point.x + 1][n.point.y] == 0 || squares[n.point.x + 1][n.point.y] == 2)){
-			n.children.unshift(new Node(n,new Point(n.point.x + 1,n.point.y),new Array(),n.g_score + 1,heuristic_estimate(new Point(n.point.x+1,n.point.y),food,search_type)));
+			n.children.unshift(new Node(n,new Point(n.point.x + 1,n.point.y),new Array(),n.g_score + 1,heuristic_estimate(new Point(n.point.x + 1,n.point.y),food,search_type)));
         }
 		if(closedList[n.point.x][n.point.y + 1] == 0 && (squares[n.point.x][n.point.y + 1] == 0 || squares[n.point.x][n.point.y + 1] == 2)){
 			n.children.unshift(new Node(n,new Point(n.point.x,n.point.y + 1),new Array(),n.g_score + 1,heuristic_estimate(new Point(n.point.x,n.point.y + 1),food,search_type)));
