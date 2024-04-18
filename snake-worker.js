@@ -264,7 +264,6 @@ function move(new_head){
         squares[snake[snake.length - 1].x][snake[snake.length - 1].y] = 0;
     }
     
-    //move the snake forward
     for(var i = snake.length - 1 ; i > 0; i--){
         snake[i].x = snake[i - 1].x;
         snake[i].y = snake[i - 1].y;
