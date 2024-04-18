@@ -211,16 +211,15 @@ function heuristic_estimate(point1, point2 , search_type){
 	}
 }
 
-//First heuristic: calculate the direct path to the food. This will usually be less than actual, because it's a slant distance.
+//First heuristic: Euclidean.
 function heuristic_estimate_E(point1 , point2){
 	return Math.sqrt(Math.pow(point1.x - point2.x , 2) + Math.pow(point1.y - point2.y , 2));
 }
-//Second heuristic: calculate the actual distance that the snake would have to travel to reach the food.
+//Second heuristic: Manhatten.
 function heuristic_estimate_M(point1,point2){
 	return Math.abs(point1.x - point2.x) + Math.abs(point1.y - point2.y);
 }
 
-//start the run function
 function start(){
 	init();
 	config.runTimeout = setTimeout(run, 100);
